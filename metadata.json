@@ -1,0 +1,6 @@
+{
+  "name": "Lumora Dental",
+  "description": "Premium esthetic dentistry, ceramic porcelain ateliers, and bespoke diagnostic smile care in South Florida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

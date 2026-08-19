@@ -1,0 +1,30 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Doctors collection: allow read and write so website and admin updates reflect live
+    match /doctors/{doctorId} {
+      allow read, write: if true;
+    }
+
+    // Appointments collection: allow creation, read, update, delete
+    match /appointments/{appointmentId} {
+      allow read, write: if true;
+    }
+
+    // Diagnostic Leads collection: allow creation, read, update, delete
+    match /diagnostic_leads/{leadId} {
+      allow read, write: if true;
+    }
+
+    // Connection test collection for database diagnostics
+    match /_connection_test/{testId} {
+      allow read, write: if true;
+    }
+
+    // Default catch-all
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

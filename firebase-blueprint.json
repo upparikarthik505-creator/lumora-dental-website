@@ -1,0 +1,64 @@
+{
+  "entities": {
+    "appointments": {
+      "title": "Appointments",
+      "description": "Scheduled patient consultations and bookings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "patientName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "treatment": { "type": "string" },
+        "consultationType": { "type": "string" },
+        "location": { "type": "string" },
+        "doctorPreference": { "type": "string" },
+        "date": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "notes": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "estimatedValue": { "type": "number" }
+      },
+      "required": ["patientName", "email", "phone", "treatment"]
+    },
+    "diagnostic_leads": {
+      "title": "Diagnostic Leads",
+      "description": "Inbound 3D shade assessments and diagnostic lead inquiries",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "patientName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "concern": { "type": "string" },
+        "shadeGoal": { "type": "string" },
+        "estimatedBudget": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["patientName", "email", "phone"]
+    },
+    "doctors": {
+      "title": "Doctors & Specialists",
+      "description": "Dental specialists, ceramists, and practice clinicians",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "experienceYears": { "type": "number" },
+        "bio": { "type": "string" },
+        "education": { "type": "string" },
+        "specialties": { "type": "array", "items": { "type": "string" } },
+        "credentials": { "type": "array", "items": { "type": "string" } },
+        "casesCompleted": { "type": "string" },
+        "signatureTechnique": { "type": "string" },
+        "locationPreference": { "type": "string" },
+        "availabilityStatus": { "type": "string" },
+        "image": { "type": "string" }
+      },
+      "required": ["name", "role"]
+    }
+  }
+}
